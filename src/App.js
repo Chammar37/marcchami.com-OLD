@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import MeInfo from './components/MeInfo'; 
+import MeJobs from './components/Jobs';
+import { Container, Row, Col } from "react-bootstrap";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    
+      <div className="Personal_Info">
+        <MeInfo
+          name={"Marc J. Chami"}
+          position={"Software Engineer"}
+        
+        ></MeInfo>
+      </div>
+      
+      <Container> 
+        <Row>
+          <div className="Job1">
+              <MeJobs
+                title={"Quality Engineer Automation & RPA"}
+                description = {"lotus poems"}
+                technology = {"Java, Python, Jenkins, Terminal, Bash"}
+              ></MeJobs>
+
+          </div>
+        </Row>
+    </Container>
+      
+      </>
+
+
+
+
+
   );
 }
+
+
+
 
 export default App;
